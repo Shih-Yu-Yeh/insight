@@ -4,11 +4,12 @@ import BrandTwo from '../../images/brand/brand-02.svg';
 import BrandThree from '../../images/brand/brand-03.svg';
 import BrandFour from '../../images/brand/brand-04.svg';
 import BrandFive from '../../images/brand/brand-05.svg';
+import BrandSix from '../../images/brand/brand-06.svg';
 
 const brandData: BRAND[] = [
   {
     logo: BrandOne,
-    name: 'Google',
+    name: 'Face Recognition',
     visitors: 3.5,
     revenues: '5,768',
     sales: 590,
@@ -16,7 +17,7 @@ const brandData: BRAND[] = [
   },
   {
     logo: BrandTwo,
-    name: 'Twitter',
+    name: 'Pedestrian Detection',
     visitors: 2.2,
     revenues: '4,635',
     sales: 467,
@@ -24,7 +25,7 @@ const brandData: BRAND[] = [
   },
   {
     logo: BrandThree,
-    name: 'Github',
+    name: 'Traffic Enforcement',
     visitors: 2.1,
     revenues: '4,290',
     sales: 420,
@@ -32,7 +33,7 @@ const brandData: BRAND[] = [
   },
   {
     logo: BrandFour,
-    name: 'Vimeo',
+    name: 'Intrusion Detection',
     visitors: 1.5,
     revenues: '3,580',
     sales: 389,
@@ -40,12 +41,22 @@ const brandData: BRAND[] = [
   },
   {
     logo: BrandFive,
-    name: 'Facebook',
+    name: 'Slope Monitoring',
     visitors: 3.5,
     revenues: '6,768',
     sales: 390,
     conversion: 4.2,
   },
+  {
+    logo: BrandSix,
+    name: 'Defect Inspection',
+    visitors: 3.5,
+    revenues: '6,768',
+    sales: 390,
+    conversion: 4.2,
+  },
+
+
 ];
 
 const TableOne = () => {
@@ -86,11 +97,10 @@ const TableOne = () => {
 
         {brandData.map((brand, key) => (
           <div
-            className={`grid grid-cols-3 sm:grid-cols-5 ${
-              key === brandData.length - 1
-                ? ''
-                : 'border-b border-stroke dark:border-strokedark'
-            }`}
+            className={`grid grid-cols-3 sm:grid-cols-5 ${key === brandData.length - 1
+              ? ''
+              : 'border-b border-stroke dark:border-strokedark'
+              }`}
             key={key}
           >
             <div className="flex items-center gap-3 p-2.5 xl:p-5">
